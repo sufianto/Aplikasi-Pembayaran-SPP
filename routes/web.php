@@ -29,7 +29,7 @@ Route::get('/', function () {
     return view('auth.login');
 });
 Route::get('/homeptgs', function () {
-    return view('petugas.homeptgs');
+    return view('petugas.index');
 });
 Route::get('/historyptgs', function () {
     return view('petugas.historyptgs');
