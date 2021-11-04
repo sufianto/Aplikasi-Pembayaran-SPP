@@ -95,7 +95,15 @@
 										<div class="dropdown-divider"></div>
 										<a class="dropdown-item" href="#">Account Setting</a>
 										<div class="dropdown-divider"></div>
-										<a class="dropdown-item" href="#">Logout</a>
+										<form method="POST" action="{{ route('logout') }}">
+											@csrf
+
+											<x-dropdown-link :href="route('logout')"
+													onclick="event.preventDefault();
+																this.closest('form').submit();">
+												{{ __('Log Out') }}
+											</x-dropdown-link>
+										</form>
 									</li>
 								</div>
 							</ul>
