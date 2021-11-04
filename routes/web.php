@@ -32,6 +32,10 @@ Route::get('/homeptgs', function () {
     return view('homeptgs');
 });
 
+Route::get('/siswa', function () {
+    return view('siswas.index');
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
