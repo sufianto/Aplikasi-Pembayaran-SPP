@@ -17,8 +17,12 @@ Route::get('/home', function () {
     return view('welcome2');
 });
 
-Route::get('/siswa', function () {
-    return view('siswas.index');
+Route::get('/app', function () {
+    return view('template.app');
+});
+
+Route::get('/contoh', function () {
+    return view('contoh-pake-template');
 });
 
 Route::get('/', function () {
