@@ -28,6 +28,9 @@ Route::get('/contoh', function () {
 Route::get('/', function () {
     return view('auth.login');
 });
+Route::get('/homeptgs', function () {
+    return view('homeptgs');
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard');
