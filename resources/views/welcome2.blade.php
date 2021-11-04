@@ -98,11 +98,14 @@
 										<form method="POST" action="{{ route('logout') }}">
 											@csrf
 
-											<x-dropdown-link :href="route('logout')"
+											<a class="dropdown-item" href="route('logout')" onclick="event.preventDefault();
+											this.closest('form').submit();">{{ __('Log Out') }}</a>
+											
+											{{-- <x-dropdown-link :href="route('logout')"
 													onclick="event.preventDefault();
 																this.closest('form').submit();">
 												{{ __('Log Out') }}
-											</x-dropdown-link>
+											</x-dropdown-link> --}}
 										</form>
 									</li>
 								</div>
@@ -237,6 +240,14 @@
 												</tr>
 											</tfoot>
 											<tbody>
+												<tr>
+													<td>Tiger Nixon</td>
+													<td>System Architect</td>
+													<td>Edinburgh</td>
+													<td>61</td>
+													<td>2011/04/25</td>
+													<td>$320,800</td>
+												</tr>
 												<tr>
 													<td>Tiger Nixon</td>
 													<td>System Architect</td>

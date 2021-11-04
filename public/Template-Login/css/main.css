@@ -250,6 +250,7 @@ iframe {
   height: 100%;
   box-shadow: 0px 0px 0px 0px;
   color: rgba(48,227,202, 0.5);
+  
 }
 
 .input100:focus + .focus-input100 {
@@ -298,6 +299,7 @@ iframe {
 .input100:focus + .focus-input100 + .symbol-input100 {
   color: #30e3ca;
   padding-left: 28px;
+  box-shadow: 2px 2px 2px 2px;
 }
 
 /*------------------------------------------------------------------
@@ -312,6 +314,7 @@ iframe {
   flex-wrap: wrap;
   justify-content: center;
   padding-top: 20px;
+  
 }
 
 .login100-form-btn {
