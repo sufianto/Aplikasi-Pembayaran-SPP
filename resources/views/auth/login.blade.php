@@ -1,100 +1,122 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+	<title>SPP's Login</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="{{asset ('Template-Login/images/icons/favicon.ico')}}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{asset ('Template-Login/vendor/bootstrap/css/bootstrap.min.css')}}">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{asset ('Template-Login/fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{asset ('Template-Login/vendor/animate/animate.css')}}">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="{{asset ('Template-Login/vendor/css-hamburgers/hamburgers.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{asset ('Template-Login/vendor/select2/select2.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{asset ('Template-Login/css/util.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{asset ('Template-Login/css/main.css')}}">
+<!--===============================================================================================-->
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    
-    {{-- Fonts Poppins --}}
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+{{-- Fonts Poppins --}}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-    <style>
-        /* @font-face {
-                font-family: 'Poppins';
-                src: 
-                    url(../../../public/font/Poppins/Poppins-Black.ttf), 
-                    url(../../../public/font/Poppins/Poppins-BlackItalic.ttf),
-                    url(../../../public/font/Poppins/Poppins-Bold.ttf),
-                    url(../../../public/font/Poppins/Poppins-BoldItalic.ttf),
-                    url(../../../public/font/Poppins/Poppins-ExtraBold.ttf),
-                    url(../../../public/font/Poppins/Poppins-ExtraBolditalic.ttf),
-                    url(../../../public/font/Poppins/Poppins-ExtraLightItalic.ttf),
-                    url(../../../public/font/Poppins/Poppins-ExtraLight.ttf),
-                    url(../../../public/font/Poppins/Poppins-Italic.ttf),
-                    url(../../../public/font/Poppins/Poppins-Light.ttf),
-                    url(../../../public/font/Poppins/Poppins-LightItalic.ttf),
-                    url(../../../public/font/Poppins/Poppins-Medium.ttf),
-                    url(../../../public/font/Poppins/Poppins-MediumItalic.ttf),
-                    url(../../../public/font/Poppins/Poppins-Regular.ttf),
-                    url(../../../public/font/Poppins/Poppins-SemiBoldItalic.ttf),
-                    url(../../../public/font/Poppins/Poppins-SemiBold.ttf),
-                    url(../../../public/font/Poppins/Poppins-Thin.ttf),
-                    url(../../../public/font/Poppins/Poppins-ThinItalic.ttf);
-            } */
+<style>
+	body{
+		font-family: 'Poppins', sans-serif;
+		overflow: hidden
+	}
+	#waveone{
+		width: 800px;
+		height: 650px;
+		left: 0px;
+		bottom: -258px;
+		position: absolute;
+		
+	}
 
-        body {
-            background-color: #e4f9f5;
-            font-family: 'Poppins', sans-serif;
-        }
-    </style>
+	.wavetwo{
+		top: -10px;
+		right: -110px;
+		position: absolute;
+	}
+	
+</style>
+</head>
+<body>
+	
+	<div class="limiter">
+		
+		
+		<div class="container-login100">
+	
+				<form class="login100-form validate-form" method="POST" action="{{ route('login') }}">
+					@csrf
+					<span class="login100-form-title font-weight-bold">
+						<h2>SPP's</h2>
+					</span>
 
-    <title> SPP's Login </title>
-  </head>
-  <body>
-      <div class="container">
-          <div class="row">
-              <div class="col-2"></div>
-              <div class="col-5">
-                <form method="POST" action="{{ route('login') }}">
-                    @csrf
-        
-                    <div>
-                        <label class="fw-bolder fs-5" for="email">Email</label>
-        
-                        <input type="email" class="form-control" aria-describedby="emailHelp">
-                    </div>
-        
-                    <div>
-                        <label for="password" :value="__('Password')">Password</label>
-        
-                        <input type="password" class="form-control">
-                    </div>
-        
-                    <div class="flex items-center justify-end mt-4">
-                        <x-button class="ml-3">
-                            {{ __('Log in') }}
-                        </x-button>
-                    </div>
-                </form>
-              </div>
-              <div class="col-2"></div>
-          </div>
-      </div>
-    
+					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+						<input class="input100 bg-transparent" type="text" name="email" placeholder="Email" style="border: 2px solid black">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
+					</div>
 
-    <!-- Optional JavaScript; choose one of the two! -->
+					<div class="wrap-input100 validate-input" data-validate = "Password is required">
+						<input class="input100 bg-transparent" type="password" name="password" placeholder="Password" style="border: 2px solid black">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+						</span>
+					</div>
+					
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn text-dark" style="border-radius: 17px;">
+							{{ __('Log in') }}
+						</button>
+					</div>
+				</form>
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+		</div>
+		
+	</div>
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    -->
-  </body>
+	<div id="waveone">
+		<img src="{{asset ('Template-Login/images/Group 10.png')}}" alt="wave">
+	</div>
+
+	<div class="wavetwo">
+		<img src="{{asset ('Template-Login/images/group12.svg')}}" alt="wavetwo">
+	</div>
+	
+
+	
+
+	
+<!--===============================================================================================-->	
+	<script src="{{asset ('Template-Login/vendor/jquery/jquery-3.2.1.min.js')}}"></script>
+<!--===============================================================================================-->
+	<script src="{{asset ('Template-Login/vendor/bootstrap/js/popper.js')}}"></script>
+	<script src="{{asset ('Template-Login/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
+<!--===============================================================================================-->
+	<script src="{{asset ('Template-Login/vendor/select2/select2.min.js')}}"></script>
+<!--===============================================================================================-->
+	<script src="{{asset ('Template-Login/vendor/tilt/tilt.jquery.min.js')}}"></script>
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+<!--===============================================================================================-->
+	<script src="{{asset ('Template-Login/js/main.js')}}"></script>
+
+</body>
 </html>
-
-
-
-
-
-
-
-
-

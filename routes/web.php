@@ -16,11 +16,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/home', function () {
     return view('welcome2');
 });
-Route::get('/', function () {
-    return view('welcome');
+
+Route::get('/siswa', function () {
+    return view('siswas.index');
 });
-Route::get('/login2', function () {
-    return view('login2');
+
+Route::get('/', function () {
+    return view('auth.login');
 });
 
 Route::get('/dashboard', function () {
