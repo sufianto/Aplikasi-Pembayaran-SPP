@@ -32,7 +32,7 @@ Route::get('/homeptgs', function () {
     return view('petugas.index');
 });
 Route::get('/historyptgs', function () {
-    return view('petugas.historyptgs');
+    return view('petugas.history');
 });
 
 Route::get('/siswa', function () {
