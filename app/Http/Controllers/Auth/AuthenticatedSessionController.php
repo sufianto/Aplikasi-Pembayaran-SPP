@@ -26,13 +26,18 @@ class AuthenticatedSessionController extends Controller
      * @param  \App\Http\Requests\Auth\LoginRequest  $request
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function store(LoginRequest $request)
+    public function store(Request $request)
     {
-        $request->authenticate();
+        if (Auth::guard('siswa')->attempt(['nipd' => $request->username, 'password' => $request->password])) {
+            return redirect('/siswa');
+        } elseif (Auth::guard('user')->attempt(['username' => $request->username, 'password' => $request->password])) {
+            return redirect('/');
+        } elseif (Auth::guard('guru')->attempt(['username' => $request->username, 'password' => $request->password])) {
+            return redirect('/');
+        }
 
-        $request->session()->regenerate();
-
-        return redirect()->intended(RouteServiceProvider::HOME);
+        return redirect('/login');
+        
     }
 
     /**
