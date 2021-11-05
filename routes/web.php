@@ -28,6 +28,16 @@ Route::get('/contoh', function () {
 Route::get('/', function () {
     return view('auth.login');
 });
+Route::get('/homepetugas', function () {
+    return view('petugas.index');
+});
+Route::get('/historypetugas', function () {
+    return view('petugas.history');
+});
+
+Route::get('/homesiswa', function () {
+    return view('siswas.index');
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard');
