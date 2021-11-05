@@ -88,14 +88,15 @@
     <div class="col-8">
         <nav class="navbar">
             <div class="container pt-2 pb-2">
-                <form method="POST" action="{{ route('logout') }}">
+                <form method="POST" action="{{ route('logout') }}" style="margin-left: auto; ">
                     @csrf
-
-                    <x-dropdown-link :href="route('logout')" onclick="event.preventDefault();
-                                                this.closest('form').submit();">
+                    <a href="{{ route('logout') }}" onclick="event.preventDefault();
+                        this.closest('form').submit();">
                         <div class="btn btn-outline-dark pt-2 pb-2 pr-5 pl-5 btn-logout"
-                            style="margin-left: auto; border-radius: 30px">Logout</div>
-                    </x-dropdown-link>
+                            style="margin-left: auto; border-radius: 30px">
+                            Logout
+                        </div>
+                    </a>
                 </form>
             </div>
         </nav>
@@ -149,7 +150,7 @@
                 </iframe>
             </div>
             <hr class="mt-4" style="height: 2.5px" />
-            <section class="pt-5 pb-5">
+            <section class="ms-5 pt-5 pb-5">
                 <div class="text-center" style="margin-bottom: -15%">
                     <p style="font-size: 13px; font-weight: 500">
                         Copyright SMK Taruna Bhakti <br />
