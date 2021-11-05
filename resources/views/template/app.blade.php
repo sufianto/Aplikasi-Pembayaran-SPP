@@ -141,8 +141,8 @@
       <div class="col-4">
           <nav class="navbar">
               <div class="container pt-2 pb-2">
-                  <div class="btn btn-outline-dark rounded-circle btn-logout"
-                      style="margin-left: auto;"><i class="fas fa-sign-out-alt"></i></div>
+                  <div class="btn btn-outline-dark btn-logout"
+                      style="margin-left: auto; border-radius: 50px"><i class="fas fa-sign-out-alt"></i></div>
               </div>
           </nav>
       </div>
