@@ -28,12 +28,12 @@ class AuthenticatedSessionController extends Controller
      */
     public function store(Request $request)
     {
-        if (Auth::guard('siswa')->attempt(['nipd' => $request->username, 'password' => $request->password])) {
+        if (Auth::guard('siswa')->attempt(['nisn' => $request->username, 'password' => $request->password])) {
             return redirect('/siswa');
-        } elseif (Auth::guard('user')->attempt(['username' => $request->username, 'password' => $request->password])) {
-            return redirect('/admin');
         } elseif (Auth::guard('petugas')->attempt(['username' => $request->username, 'password' => $request->password])) {
             return redirect('/petugas');
+        } elseif (Auth::guard('user')->attempt(['username' => $request->username, 'password' => $request->password])) {
+            return redirect('/admin');
         }
 
         return redirect('/login');
