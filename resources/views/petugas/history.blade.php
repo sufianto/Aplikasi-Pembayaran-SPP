@@ -1,6 +1,7 @@
 @extends('template.app')
 
 @section('main')
+				<div class="container">
                     <div class="row">
 						<div class="col-md-12">
                             <h1><b>Riwayat</b></h1><br>
@@ -43,6 +44,7 @@
 							</div>
 						</div>
 					</div>
+				</div>
  
 
 @endsection
