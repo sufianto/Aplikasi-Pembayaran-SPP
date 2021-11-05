@@ -37,6 +37,10 @@ Route::get('/historypetugas', function () {
     return view('petugas.history');
 });
 
+Route::get('/pembayaran', function () {
+    return view('petugas.pembayaran');
+});
+
 Route::get('/siswa', function () {
     return view('siswas.index');
 });
