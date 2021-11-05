@@ -1,11 +1,13 @@
 @extends('template.app')
 
-@section('main2')	
+@section('main')
+				
                     <div class="row">
 						<div class="col-md-12">
+                            <h1><b>Riwayat</b></h1><br>
 							<div class="card">
 								<div class="card-header" style="background-color: #23AD9A; font-size: 30px;">
-									<h4 class="card-title text-white fw-bold" style="font-family: 'Poppins', sans-serif; font-size: 20px;">Riwayat Pembayaran (nama siswa)</h4>
+									<h4 class="card-title text-white fw-bold" style="font-family: 'Poppins', sans-serif; font-size: 20px;">Riwayat Pembayaran</h4>
 								</div>
 								<div class="card-body">
 									<div class="table-responsive">
@@ -32,16 +34,6 @@
 												</tr>
 												<tr>
 													<td>481544</td>
-													<td>5/11/2021</td>
-													<td>500000</td>
-												</tr>
-												<tr>
-													<td>428546</td>
-													<td>5/11/2021</td>
-													<td>500000</td>
-												</tr>
-												<tr>
-													<td>474563</td>
 													<td>5/11/2021</td>
 													<td>500000</td>
 												</tr>

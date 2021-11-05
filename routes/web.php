@@ -28,8 +28,13 @@ Route::get('/contoh', function () {
 Route::get('/', function () {
     return view('auth.login');
 });
-Route::get('/homeptgs', function () {
-    return view('homeptgs');
+
+Route::get('/petugas', function () {
+    return view('petugas.index');
+});
+
+Route::get('/historypetugas', function () {
+    return view('petugas.history');
 });
 
 Route::get('/siswa', function () {
@@ -38,6 +43,6 @@ Route::get('/siswa', function () {
 
 Route::get('/dashboard', function () {
     return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+})->name('dashboard');
 
 require __DIR__.'/auth.php';

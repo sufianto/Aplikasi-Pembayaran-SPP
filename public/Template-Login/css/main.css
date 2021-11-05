@@ -349,7 +349,7 @@ iframe {
   font-family: Montserrat-Bold;
   font-size: 15px;
   line-height: 1.5;
-  color: #fff;
+  color: #40514e;
   text-transform: uppercase;
   z-index: 1;
 
@@ -372,7 +372,16 @@ iframe {
 }
 
 .login100-form-btn:hover {
-    background: #40514e;
+    color: white;
+    background-color: #28c4af;
+    
+    
+}
+
+.login100-form-btn:active {
+    color: white;
+    background-color: #1f9989;
+    
 }
 
 /*------------------------------------------------------------------

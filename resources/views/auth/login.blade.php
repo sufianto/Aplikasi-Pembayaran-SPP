@@ -71,9 +71,9 @@
                     <h2>SPP's</h2>
                 </span>
 
-                <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
-                    <input class="input100 bg-transparent" type="text" name="email" placeholder="Email"
-                        style="border: 2px solid black">
+                <div class="wrap-input100 validate-input" data-validate="Username is Required">
+                    <input class="input100 bg-transparent" type="text" name="username" placeholder="Username"
+                        style="border: 2px solid black" value="{{ old('username') }}">
                     <span class="focus-input100"></span>
                     <span class="symbol-input100">
                         <i class="fa fa-envelope" aria-hidden="true"></i>
@@ -90,7 +90,7 @@
                 </div>
 
                 <div class="container-login100-form-btn">
-                    <button class="login100-form-btn text-dark" style="border-radius: 17px;">
+                    <button class="login100-form-btn" type="submit" style="border-radius: 17px;">
                         {{ __('Log in') }}
                     </button>
                 </div>
