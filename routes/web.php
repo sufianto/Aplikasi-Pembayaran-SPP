@@ -28,19 +28,21 @@ Route::get('/contoh', function () {
 Route::get('/', function () {
     return view('auth.login');
 });
-Route::get('/homepetugas', function () {
+
+Route::get('/petugas', function () {
     return view('petugas.index');
 });
+
 Route::get('/historypetugas', function () {
     return view('petugas.history');
 });
 
-Route::get('/homesiswa', function () {
+Route::get('/siswa', function () {
     return view('siswas.index');
 });
 
 Route::get('/dashboard', function () {
     return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+})->name('dashboard');
 
 require __DIR__.'/auth.php';

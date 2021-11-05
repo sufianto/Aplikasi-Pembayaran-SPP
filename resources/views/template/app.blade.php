@@ -107,8 +107,16 @@
     <div class="col-8">
         <nav class="navbar">
             <div class="container pt-2 pb-2">
-                <div class="btn btn-outline-dark pt-2 pb-2 pr-5 pl-5 btn-logout"
-                    style="margin-left: auto; border-radius: 30px">Logout</div>
+                <form method="POST" action="{{ route('logout') }}" style="margin-left: auto; ">
+                    @csrf
+                    <a href="{{ route('logout') }}" onclick="event.preventDefault();
+                        this.closest('form').submit();">
+                        <div class="btn btn-outline-dark pt-2 pb-2 pr-5 pl-5 btn-logout"
+                            style="margin-left: auto; border-radius: 30px">
+                            Logout
+                        </div>
+                    </a>
+                </form>
             </div>
         </nav>
     </div>
@@ -234,7 +242,7 @@
                     var column = this;
                     var select = $(
                             '<select class="form-control"><option value=""></option></select>'
-                            )
+                        )
                         .appendTo($(column.footer()).empty())
                         .on('change', function() {
                             var val = $.fn.dataTable.util.escapeRegex(

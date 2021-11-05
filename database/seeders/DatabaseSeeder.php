@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use App\Models\Siswa;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,6 +15,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        // \App\Models\Siswa::factory(10)->create();
+        Siswa::create([
+            'nipd' => '123451',
+            'password' => Hash::make('password'),
+        ]);
     }
 }
