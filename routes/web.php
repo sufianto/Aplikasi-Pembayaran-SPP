@@ -17,6 +17,26 @@ Route::get('/home', function () {
     return view('welcome2');
 });
 
+Route::get('/app', function () {
+    return view('template.app');
+});
+
+Route::get('/contoh', function () {
+    return view('contoh-pake-template');
+});
+
+Route::get('/', function () {
+    return view('auth.login');
+});
+
+Route::get('/petugas', function () {
+    return view('petugas.index');
+});
+
+Route::get('/historypetugas', function () {
+    return view('petugas.history');
+});
+
 Route::get('/siswa', function () {
     return view('siswas.index');
 });
