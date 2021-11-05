@@ -46,7 +46,7 @@
   </head>
   <body>
     
-    <!-- As a heading -->
+    {{-- Navbar --}}
     <div class="row">
         <div class="col-4">
             <div class="navbar navbar-light" style="background: #30E3CA; border-radius: 0px 0px 100px 0px; box-shadow: 5px 7px 0px 1px #40514E">
@@ -67,6 +67,7 @@
         </div>
     </div>
 
+    {{-- Main --}}
     <div class="container mt-5 mb-5">
       
       @yield('main')
@@ -74,7 +75,7 @@
     </div>
 
 
-
+    {{-- Footer --}}
   <footer class="footer position-absolute bottom-0 start-50 translate-middle-x" style="background: #23AD9A; border-radius: 60px 60px 0px 0px ">
     <div class="container text-white">
       <div class="row pt-5 pb-5 ">
