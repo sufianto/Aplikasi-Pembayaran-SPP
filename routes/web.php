@@ -37,12 +37,16 @@ Route::get('/historypetugas', function () {
     return view('petugas.history');
 });
 
-Route::get('/siswa', function () {
+Route::get('/siswas', function () {
     return view('siswas.index');
 });
+
+Route::resource('jadwalmapel', JadwalController::class);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+
 
 require __DIR__.'/auth.php';

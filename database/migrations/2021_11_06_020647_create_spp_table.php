@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePetugasTable extends Migration
+class CreateSppTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class CreatePetugasTable extends Migration
      */
     public function up()
     {
-        Schema::create('petugas', function (Blueprint $table) {
-            $table->id('id_petugas');
-            $table->string('username');
-            $table->string('password');
-            $table->string('nama_petugas');
-            $table->enum('level', ['admin', 'petugas']);
+      Schema::create('spps', function (Blueprint $table) {
+            $table->id('id_spp');
+            
+
+            $table->string('bulan');
+            $table->bigInteger('nominal');
 
             $table->timestamps();
         });
@@ -31,6 +31,6 @@ class CreatePetugasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('petugas');
+        Schema::dropIfExists('spp');
     }
 }

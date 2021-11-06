@@ -20,8 +20,8 @@ class Petugas extends Authenticatable
 
     protected $table = 'petugas';
     protected $fillable = [
-        'nama',
-        'email',
+        'nama_petugas',
+        'level',
         'username',
         'password',
     ];
@@ -44,4 +44,9 @@ class Petugas extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    
+     public function pembayaran()
+    {
+        return $this->hasMany(Pembayaran::class);
+    }
 }
