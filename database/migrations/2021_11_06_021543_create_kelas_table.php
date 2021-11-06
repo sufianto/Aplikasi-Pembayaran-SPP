@@ -13,11 +13,10 @@ class CreateKelasTable extends Migration
      */
     public function up()
     {
-        Schema::create('kelas', function (Blueprint $table) {
-            $table->id('id_kelas');
-            $table->string('nama_kelas');
-            $table->string('kompetensi_keahlian');
-
+        Schema::create('kelass', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('nama_kelas', 10);
+            $table->string('kompetensi_keahlian', 50);
             $table->timestamps();
         });
     }
@@ -29,6 +28,6 @@ class CreateKelasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('kelas');
+        Schema::dropIfExists('kelass');
     }
 }

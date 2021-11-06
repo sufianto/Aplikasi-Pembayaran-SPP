@@ -3,7 +3,7 @@
 <div class="card">
     <div class="card-header bg-primary">
         <h4 class="card-title text-white float-left">Data SPP</h4>
-        <a href="" class="btn btn-sm btn-circle btn-success float-right"><i class="fas fa-plus"></i></a>
+        <a href="dataspp/create" class="btn btn-sm btn-circle btn-success float-right"><i class="fas fa-plus"></i></a>
     </div>
     <div class="card-body">
         <div class="table-responsive">
@@ -23,22 +23,25 @@
                     </tr>
                 </tfoot>
                 <tbody>
-                    <tr>
-                        <td>Tiger Nixon</td>
-                        <td>System Architect</td>
-                        <td>
-                            <a href="" class="btn btn-sm btn-circle btn-primary"><i class="fas fa-edit"></i></a>
-                            <a href="" class="btn btn-sm btn-circle btn-danger"><i class="fas fa-trash"></i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Tiger Nixon</td>
-                        <td>System Architect</td>
-                        <td>
-                            <a href="" class="btn btn-sm btn-circle btn-primary"><i class="fas fa-edit"></i></a>
-                            <a href="" class="btn btn-sm btn-circle btn-danger"><i class="fas fa-trash"></i></a>
-                        </td>
-                    </tr>
+                    @foreach ($spp as $p)
+                        <tr>
+                            <td>{{$p->bulan}}</td>
+                            <td>{{$p->nominal}}</td>
+                            <td>
+                                <a href="{{ url('admin/dataspp/'. $p->id .'/edit') }}" class="btn btn-sm btn-circle btn-primary float-left mr-2"><i class="fas fa-edit"></i></a>
+                                <form method="post" action="{{ url('admin/dataspp', $p->id) }}" id="delete{{ $p->id }}">
+                                    
+                                    @csrf
+                                    @method('delete')
+                                    
+                                    <button type="submit" class="btn btn-sm btn-circle btn-danger float-left" onclick="deleteData({{ $p->id }})">
+                                        <i class="fas fa-trash"></i>
+                                    </button>	
+                                
+                                </form>			
+                            </td>
+                        </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>

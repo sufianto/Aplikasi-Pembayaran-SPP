@@ -7,23 +7,30 @@ use Illuminate\Database\Eloquent\Model;
 
 class Pembayaran extends Model
 {
-    use HasFactory;
-     protected $table = 'pembayarans';
+    protected $table = 'pembayarans';
+   
     protected $fillable = [
-        'tgl_bayar',
-        'bulan_dibayar',
-        'tahun_dibayar',
-        'jumlah_bayar',
-        'id_petugas',
-        'nisn',
+         'id_petugas','id_siswa', 'spp_bulan', 'jumlah_bayar'
     ];
-            public function petugas()
+   
+ /**
+   * Belongs To Pembayaran -> User (petugas)
+   *
+   * @return void
+   */
+    public function users()
     {
-        return $this->belongsTo(Petugas::class);
+         return $this->belongsTo(User::class,'id_petugas', 'id');
     }
-            public function siswa()
+   
+ /**
+   * Has Many Pembayaran -> Siswa
+   *
+   * @return void
+   */
+    public function siswas()
     {
-        return $this->belongsTo(Siswa::class);
+         return $this->belongsTo(Siswa::class,'id_siswa','id','nisn');
     }
-
+   
 }
