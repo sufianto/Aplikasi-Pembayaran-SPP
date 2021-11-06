@@ -37,11 +37,34 @@ Route::get('/historypetugas', function () {
     return view('petugas.history');
 });
 
-Route::get('/siswas', function () {
+Route::get('/pembayaran', function () {
+    return view('petugas.pembayaran');
+});
+
+Route::get('/siswa', function () {
     return view('siswas.index');
 });
 
-Route::resource('jadwalmapel', JadwalController::class);
+
+Route::get('/kelas', function () {
+    return view('admin.kelas.index');
+});
+Route::get('/tambahkelas', function () {
+    return view('admin.kelas.create');
+});
+Route::get('/editkelas', function () {
+    return view('admin.kelas.edit');
+});
+
+Route::get('/spp', function () {
+    return view('admin.spp.index');
+});
+Route::get('/tambahspp', function () {
+    return view('admin.spp.create');
+});
+Route::get('/editspp', function () {
+    return view('admin.spp.edit');
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard');

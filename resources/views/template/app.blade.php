@@ -47,18 +47,19 @@
 
         .btn-logout {
             border: 1px solid #40514E;
-            background: #30E3CA;
+            background: #11999E;
             box-shadow: 3px 3px 2px #40514E;
             font-weight: 500;
+            color: white;
         }
 
         .btn-logout:hover {
-            background: #fff;
-            color: #40514E;
+            background: #0c6a6d;
+            color: #fff;
         }
 
         .btn-logout:active {
-            background: rgb(245, 245, 245);
+            background: #40514E;
             border: 1px solid #40514E;
         }
 
@@ -95,11 +96,11 @@
       <div class="row" style="width: 100%">
       <div class="col-4">
         <div class="navbar  navbar-light"
-            style="background: #30E3CA; border-radius: 0px 0px 100px 0px; box-shadow: 5px 7px 0px 1px #40514E">
+            style="background: #11999E; border-radius: 0px 0px 100px 0px; box-shadow: 5px 7px 0px 1px #40514E">
             <div class="container justify-content-center">
                 <a class="navbar-brand pb-2 pt-2" href="#">
                     <img src="{{ asset('image/logo_tb.jpg') }}" alt="" width="40" height="40" class="">
-                    <span class="h4 ms-3 text-center" style="font-weight: 550">SPP's - APP</span>
+                    <span class="h4 ml-3 text-center text-white" style="font-weight: 550">SPP's - APP</span>
                 </a>
             </div>
         </div>
@@ -122,16 +123,17 @@
     </div>
       </div>
     </div>
+
     {{-- max-width 768px --}}
     <div class="navbar-kecil">
       <div class="row" style="width: 100%">
         <div class="col-8">
           <div class="navbar navbar-light"
-              style="background: #30E3CA; border-radius: 0px 0px 100px 0px; box-shadow: 5px 7px 0px 1px #40514E">
+              style="background: #11999E; border-radius: 0px 0px 100px 0px; box-shadow: 5px 7px 0px 1px #40514E">
               <div class="container justify-content-center">
                   <a class="navbar-brand pb-2 pt-2" href="#">
                       <img src="{{ asset('image/logo_tb.jpg') }}" alt="" width="40" height="40" class="">
-                      <span class="h4 ms-3 text-center" style="font-weight: 550">SPP's - APP</span>
+                      <span class="h4 ms-3 text-center text-white" style="font-weight: 550">SPP's - APP</span>
                   </a>
               </div>
           </div>
@@ -139,8 +141,8 @@
       <div class="col-4">
           <nav class="navbar">
               <div class="container pt-2 pb-2">
-                  <div class="btn btn-outline-dark rounded-circle btn-logout"
-                      style="margin-left: auto;"><i class="fas fa-sign-out-alt"></i></div>
+                  <div class="btn btn-outline-dark btn-logout"
+                      style="margin-left: auto; border-radius: 50px"><i class="fas fa-sign-out-alt"></i></div>
               </div>
           </nav>
       </div>
@@ -160,9 +162,9 @@
 
 
     {{-- Footer --}}
-<footer class="footer position-absolute bottom-0 start-50 translate-middle-x" style="background: #23AD9A; border-radius: 60px 60px 0px 0px ">
+<footer class="footer position-absolute bottom-0 start-50 translate-middle-x" style="background: #11999E; border-radius: 60px 60px 0px 0px ">
   <div class="container text-white">
-        <div class="row pt-5 pb-5 ">
+        <div class="row pt-5 pb-5">
             <div class="col-lg-2 mt-4" style="font-family: poppins">
                 <img src="{{ asset('image/logo_tb.jpg') }}" alt="" style="width: 95px; height: 95px" />
             </div>
@@ -195,7 +197,7 @@
             <div class="col-lg-4 mt-3 rounded">
                 <iframe class="shadow-lg iframe-maps"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3422.9758774687684!2d106.86757171434212!3d-6.3841757642214585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69eb7eb989aead%3A0xab7c10f23f712046!2sSMK%20Taruna%20Bhakti!5e1!3m2!1sid!2sid!4v1633323181916!5m2!1sid!2sid"
-                    style="border-radius: 8px; width: 100%" allowfullscreen="" loading="lazy">
+                    style="border-radius: 8px; width: 100%;" allowfullscreen="" loading="lazy">
                 </iframe>
             </div>
             <hr class="col-lg-12 mt-4" style="border: 1px solid #30E3CA; width: 100%">

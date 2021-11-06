@@ -30,7 +30,9 @@ class AuthenticatedSessionController extends Controller
     {
         if (Auth::guard('siswa')->attempt(['nisn' => $request->username, 'password' => $request->password])) {
             return redirect('/siswa');
-        } elseif (Auth::guard('petugas')->attempt(['username' => $request->username, 'password' => $request->password])) {
+        } elseif (Auth::guard('user')->attempt(['email' => $request->username, 'password' => $request->password])) {
+            return redirect('/admin');
+        } elseif (Auth::guard('petugas')->attempt(['email' => $request->username, 'password' => $request->password])) {
             return redirect('/petugas');
         } elseif (Auth::guard('user')->attempt(['username' => $request->username, 'password' => $request->password])) {
             return redirect('/admin');
