@@ -1,19 +1,18 @@
 <?php
 
-namespace Database\Seeders;
-
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 use App\Models\Siswa;
 use App\Models\User;
-use App\Models\Pembayaran;
-use App\Models\Spp;
 use App\Models\Kelas;
-use Illuminate\Support\Facades\Hash;
+use App\Models\Spp;
+use App\Models\Pembayaran;
+use App\Models\Petugas;
 
-class DatabaseSeeder extends Seeder
+class SeederDatabase extends Seeder
 {
     /**
-     * Seed the application's database.
+     * Run the database seeds.
      *
      * @return void
      */
@@ -44,8 +43,8 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Spp::create([
-            'bulan' => 'Mei',
-            'nominal' => 500000
+            'tahun' => 2020,
+            'nominal' => 150000
         ]);
 
         Siswa::create([
@@ -53,7 +52,6 @@ class DatabaseSeeder extends Seeder
             'nis'  => '22373687',
             'nama' => 'siswa',
             'id_kelas' => 1,
-            'password' => Hash::make('siswa'),
             'nomor_telp' => '089689957106',
             'alamat' => 'Majalengka',
             'id_spp' => 1

@@ -13,12 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/home', function () {
-    return view('welcome2');
-});
-
 Route::get('/app', function () {
     return view('template.app');
+});
+Route::get('/admin', function () {
+    return view('admin.dashboard');
 });
 
 Route::get('/login2', function () {
@@ -49,8 +48,23 @@ Route::get('/siswa', function () {
     return view('siswas.index');
 });
 
+
+Route::get('/kelas', function () {
+    return view('admin.kelas.index');
+});
+Route::get('/tambahkelas', function () {
+    return view('admin.kelas.create');
+});
+Route::get('/editkelas', function () {
+    return view('admin.kelas.edit');
+});
+
+route::resource('/admin/dataspp', 'SppController');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+
 
 require __DIR__.'/auth.php';
