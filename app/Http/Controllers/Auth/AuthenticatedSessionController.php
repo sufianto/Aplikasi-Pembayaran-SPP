@@ -7,6 +7,7 @@ use App\Http\Requests\Auth\LoginRequest;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 
 class AuthenticatedSessionController extends Controller
 {
@@ -30,9 +31,9 @@ class AuthenticatedSessionController extends Controller
     {
         if (Auth::guard('siswa')->attempt(['nisn' => $request->username, 'password' => $request->password])) {
             return redirect('/siswa');
-        } elseif (Auth::guard('user')->attempt(['email' => $request->username, 'password' => $request->password])) {
+        } elseif (Auth::guard('user')->attempt(['email' => $request->username, 'password' => $request->password, 'level' => 'petugas'])) {
             return redirect('/petugas');
-        } elseif (Auth::guard('user')->attempt(['email' => $request->username, 'password' => $request->password])) {
+        } elseif (Auth::guard('user')->attempt(['email' => $request->username, 'password' => $request->password, 'level' => 'admin'])) {
             return redirect('/admin');
         }
 

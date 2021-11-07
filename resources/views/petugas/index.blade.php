@@ -1,5 +1,7 @@
 @extends('template.app')
 @section('main')
+
+@if(Auth::user(['level' => 'petugas']))
     <style>
         .ani {
             transition: 500ms;
@@ -126,7 +128,7 @@
             </div>
 
             <div class="ani bg-light col-md-4 col-lg-4 col-10 mb-4 shadow m-4 satu" style="width: 35%; border-radius:10px;">
-                <a class="card-petugas" href="#">
+                <a class="card-petugas" href="/historypetugas">
                     <div class="row">
                         <div class="col-6">
                             <div class="card-body" style="width: 100%">
@@ -146,7 +148,7 @@
 
             {{-- max-width 550px --}}
             <div class="ani bg-light col-md-4 col-lg-4 col-10 mb-4 shadow m-4 dua" style="width: 35%; border-radius:10px;">
-                <a class="card-petugas" href="#">
+                <a class="card-petugas" href="/historypetugas">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="card-body" style="width: 100%">
