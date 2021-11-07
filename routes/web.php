@@ -21,6 +21,10 @@ Route::get('/app', function () {
     return view('template.app');
 });
 
+Route::get('/login2', function () {
+    return view('auth.login2');
+});
+
 Route::get('/contoh', function () {
     return view('contoh-pake-template');
 });

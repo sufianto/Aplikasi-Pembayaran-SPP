@@ -18,8 +18,8 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\Siswa::factory(10)->create();
         Siswa::create([
-            'nama' => 'pradypta',
-            'nisn' => '123451',
+            'nama' => 'ali',
+            'nisn' => '123456',
             'kelas' => 'XII RPL 3',
             'telepon' => '07391237',
             'email' => 'pradypta@gmail.com',
