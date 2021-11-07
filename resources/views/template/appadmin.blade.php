@@ -140,8 +140,8 @@
 								<p>Data Kelas</p>
 							</a>
 						</li>
-						<li class="nav-item {{ (request()->is('spp')) ? 'active' : '' }}">
-							<a href="spp">
+						<li class="nav-item {{ (request()->is('admin/dataspp')) ? 'active' : '' }}">
+							<a href="/admin/dataspp">
 								<i class="fas fa-money-bill-wave-alt"></i>
 								<p>Data SPP</p>
 							</a>

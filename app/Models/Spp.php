@@ -2,18 +2,23 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Spp extends Model
 {
     protected $table = 'spps';
+   
     protected $fillable = [
-        'tahun',
-        'nominal',
+         'bulan', 'nominal'
     ];
-            public function spp()
-    {
-        return $this->hasMany(Spp::class);
-    }
+   
+    /**
+   * Belongs To Spp -> Petugas
+   *
+   * @return void
+   */
+   public function users()
+   {
+         return $this->belongsTo(User::class);
+   }
 }

@@ -14,14 +14,16 @@ class CreateSiswasTable extends Migration
     public function up()
     {
         Schema::create('siswas', function (Blueprint $table) {
-            $table->id('nisn');
-            $table->string('nama');
-            $table->string('kelas');
-            $table->string('alamat');
-            $table->string('telepon');
-            $table->string('id_spp');
-            $table->string('email');
-            $table->string('password');
+            $table->bigIncrements('id');
+            $table->char('nisn', 12);
+            $table->char('nis', 8);
+            $table->string('nama', 35);
+            $table->bigInteger('id_kelas')->unsigned();
+            $table->foreign('id_kelas')->references('id')->on('kelass');
+            $table->text('alamat');
+            $table->string('nomor_telp');
+            $table->bigInteger('id_spp')->unsigned();
+            $table->foreign('id_spp')->references('id')->on('spps');
             $table->timestamps();
         });
     }

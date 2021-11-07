@@ -15,26 +15,24 @@ class Siswa extends Authenticatable
     protected $table = 'siswas';
 
     protected $fillable = [
-        'nama',
-        'nisn',
-        'kelas',
-        'alamat',
-        'telepon',
-        'email',
-        'password',
-        'id_spp',
-    ];
-        public function kelas()
-    {
-        return $this->belongsTo(Kelas::class);
-    }
-        public function spp()
-    {
-        return $this->belongsTo(Spp::class);
-    }
-        public function pembayaran()
-    {
-        return $this->hasMany(Pembayaran::class);
-    }
-
+        'nisn', 'nis', 'nama', 'id_kelas', 'nomor_telp', 'alamat', 'id_spp'
+   ];
+  
+  /**
+  * Belongs To Siswa -> Spp
+  *
+  * @return void
+  */
+   public function spps()
+   {
+        return $this->belongsTo(Spp::class,'id_spp','id');
+   }
+  
+  public function pembayarans(){
+       return  $this->hasMany(Pembayaran::class,'id_spp');
+  }
+  
+   public function kelass(){
+       return  $this->belongsTo(Kelas::class,'id_kelas');
+  }
 }

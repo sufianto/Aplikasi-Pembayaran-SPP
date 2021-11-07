@@ -13,13 +13,10 @@ class CreateSppTable extends Migration
      */
     public function up()
     {
-      Schema::create('spps', function (Blueprint $table) {
-            $table->id('id_spp');
-            
-
-            $table->string('bulan');
-            $table->bigInteger('nominal');
-
+        Schema::create('spps', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->enum('bulan', ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember']);
+            $table->integer('nominal');
             $table->timestamps();
         });
     }
@@ -31,6 +28,6 @@ class CreateSppTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('spp');
+        Schema::dropIfExists('spps');
     }
 }

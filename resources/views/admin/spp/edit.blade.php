@@ -9,32 +9,38 @@
               </div>
               <div class="card-body">
                   <div class="table-responsive " style="overflow-x: hidden">
-                      <form>
+                      <form method="post" action="{{ url('/admin/dataspp', $edit->id) }}">
+                        @csrf
+                        @method('put')
                         <div class="container">
                           <div class="row">
                             <label for="bulan" class="col-sm-2 col-form-label"> <b><h2>Bulan</h2></b></label>
                             <div class="form-group col-sm-10">
-                              <select class="form-control" id="bulan">
-                                <option>Januari</option>
-                                <option>Februari</option>
-                                <option>Maret</option>
-                                <option>April</option>
-                                <option>Mei</option>
-                                <option>Juni</option>
-                                <option>Juli</option>
-                                <option>Agustus</option>
-                                <option>September</option>
-                                <option>Oktober</option>
-                                <option>November</option>
-                                <option>Desember</option>
+                              <select class="form-control" id="bulan" name="bulan">
+                                @if($edit->bulan)
+                                  <option value="{{$edit->bulan}}" selected>{{$edit->bulan}}</option>
+                                @endif
+                                <option value="Januari">Januari</option>
+                                <option value="Februari">Februari</option>
+                                <option value="Maret">Maret</option>
+                                <option value="April">April</option>
+                                <option value="Mei">Mei</option>
+                                <option value="Juni">Juni</option>
+                                <option value="Juli">Juli</option>
+                                <option value="Agustus">Agustus</option>
+                                <option value="September">September</option>
+                                <option value="Oktober">Oktober</option>
+                                <option value="November">November</option>
+                                <option value="Desember">Desember</option>
                               </select>
                             </div>
                           </div>
                           <div class="row">
-                              <label for="walikelas" class="col-sm-2 col-form-label"> <b><h2>Nominal</h2></b></label>
-                              <div class="form-group col-sm-10">
-                                <input type="number" class="form-control" id="walikelas">
-                              </div>
+                            <label for="nominal" class="col-sm-2 col-form-label"> <b><h2>Nominal</h2></b></label>
+                            <div class="form-group col-sm-10">
+                              <input type="number" class="form-control @error('nominal') is-invalid @enderror" id="nominal" name="nominal" value="{{$edit->nominal}}">
+                              <span class="text-danger">@error('nominal') {{ $message }} @enderror</span>
+                            </div>
                           </div>
                           
                           <button type="submit" class="btn btn-primary">Submit</button>

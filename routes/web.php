@@ -13,12 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/home', function () {
-    return view('welcome2');
-});
-
 Route::get('/app', function () {
     return view('template.app');
+});
+Route::get('/admin', function () {
+    return view('admin.dashboard');
 });
 
 Route::get('/contoh', function () {
@@ -56,15 +55,7 @@ Route::get('/editkelas', function () {
     return view('admin.kelas.edit');
 });
 
-Route::get('/spp', function () {
-    return view('admin.spp.index');
-});
-Route::get('/tambahspp', function () {
-    return view('admin.spp.create');
-});
-Route::get('/editspp', function () {
-    return view('admin.spp.edit');
-});
+route::resource('/admin/dataspp', 'SppController');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
