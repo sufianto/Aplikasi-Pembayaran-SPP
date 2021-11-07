@@ -42,19 +42,18 @@
         body {
             font-family: 'Poppins', sans-serif;
             /* overflow-x: hidden; */
-            background: #E4F9F5;
         }
 
         .btn-logout {
             border: 1px solid #40514E;
-            background: #11999E;
+            background: #45aaf2;
             box-shadow: 3px 3px 2px #40514E;
             font-weight: 500;
             color: white;
         }
 
         .btn-logout:hover {
-            background: #0c6a6d;
+            background: #1e6592;
             color: #fff;
         }
 
@@ -96,7 +95,7 @@
       <div class="row" style="width: 100%">
       <div class="col-4">
         <div class="navbar  navbar-light"
-            style="background: #11999E; border-radius: 0px 0px 100px 0px; box-shadow: 5px 7px 0px 1px #40514E">
+            style="background: #2d98da; border-radius: 0px 0px 100px 0px; box-shadow: 5px 7px 0px 1px #40514E">
             <div class="container justify-content-center">
                 <a class="navbar-brand pb-2 pt-2" href="#">
                     <img src="{{ asset('image/logo_tb.jpg') }}" alt="" width="40" height="40" class="">
@@ -129,7 +128,7 @@
       <div class="row" style="width: 100%">
         <div class="col-8">
           <div class="navbar navbar-light"
-              style="background: #11999E; border-radius: 0px 0px 100px 0px; box-shadow: 5px 7px 0px 1px #40514E">
+              style="background: #2d98da; border-radius: 0px 0px 100px 0px; box-shadow: 5px 7px 0px 1px #40514E">
               <div class="container justify-content-center">
                   <a class="navbar-brand pb-2 pt-2" href="#">
                       <img src="{{ asset('image/logo_tb.jpg') }}" alt="" width="40" height="40" class="">
@@ -162,7 +161,7 @@
 
 
     {{-- Footer --}}
-<footer class="footer position-absolute bottom-0 start-50 translate-middle-x" style="background: #11999E; border-radius: 60px 60px 0px 0px ">
+<footer class="footer position-absolute bottom-0 start-50 translate-middle-x" style="background: #2d98da; border-radius: 60px 60px 0px 0px ">
   <div class="container text-white">
         <div class="row pt-5 pb-5">
             <div class="col-lg-2 mt-4" style="font-family: poppins">

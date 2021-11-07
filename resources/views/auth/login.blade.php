@@ -1,7 +1,6 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <title>SPP's Login</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -35,82 +34,98 @@
         rel="stylesheet">
 
     <style>
+        /* @font-face {
+                font-family: 'Poppins';
+                src: 
+                    url(../../../public/font/Poppins/Poppins-Black.ttf), 
+                    url(../../../public/font/Poppins/Poppins-BlackItalic.ttf),
+                    url(../../../public/font/Poppins/Poppins-Bold.ttf),
+                    url(../../../public/font/Poppins/Poppins-BoldItalic.ttf),
+                    url(../../../public/font/Poppins/Poppins-ExtraBold.ttf),
+                    url(../../../public/font/Poppins/Poppins-ExtraBolditalic.ttf),
+                    url(../../../public/font/Poppins/Poppins-ExtraLightItalic.ttf),
+                    url(../../../public/font/Poppins/Poppins-ExtraLight.ttf),
+                    url(../../../public/font/Poppins/Poppins-Italic.ttf),
+                    url(../../../public/font/Poppins/Poppins-Light.ttf),
+                    url(../../../public/font/Poppins/Poppins-LightItalic.ttf),
+                    url(../../../public/font/Poppins/Poppins-Medium.ttf),
+                    url(../../../public/font/Poppins/Poppins-MediumItalic.ttf),
+                    url(../../../public/font/Poppins/Poppins-Regular.ttf),
+                    url(../../../public/font/Poppins/Poppins-SemiBoldItalic.ttf),
+                    url(../../../public/font/Poppins/Poppins-SemiBold.ttf),
+                    url(../../../public/font/Poppins/Poppins-Thin.ttf),
+                    url(../../../public/font/Poppins/Poppins-ThinItalic.ttf);
+            } */
+
         body {
             font-family: 'Poppins', sans-serif;
-            overflow: hidden
+            overflow-x: hidden;
         }
 
-        #waveone {
-            width: 500px;
-            height: 650px;
-            left: 0px;
-            bottom: -258px;
-            position: absolute;
-
+        @media (max-width: 992px) {
+            .kiri {
+                display: none
+            }
         }
-
-        .wavetwo {
-            top: -10px;
-            right: -110px;
-            position: absolute;
-        }
-
     </style>
-</head>
+  </head>
+  <body>      
+    <div class="row">
 
-<body>
-
-    <div class="limiter">
-
-
-        <div class="container-login100">
-
-            <form class="login100-form validate-form" method="POST" action="{{ route('login') }}">
-                @csrf
-                <span class="login100-form-title font-weight-bold">
-                    <h2>SPP's</h2>
-                </span>
-
-                <div class="wrap-input100 validate-input" data-validate="Username is Required">
-                    <input class="input100 bg-transparent" type="text" name="username" placeholder="Username"
-                        style="border: 2px solid black" value="{{ old('email') }}">
-                    <span class="focus-input100"></span>
-                    <span class="symbol-input100">
-                        <i class="fa fa-user" aria-hidden="true"></i>
-                    </span>
+        {{-- Selamat Datang --}}
+        <div class="col-lg-6">
+            <div class="limiter kiri">
+                <div class="container-login100">
+                    <div class="login100-form-title text-white">
+                        <h1>Selamat Datang di</h1>
+                        <h2 class="mt-2">Aplikasi SPP's</h2>
+                    </div>
                 </div>
-
-                <div class="wrap-input100 validate-input" data-validate="Password is required">
-                    <input class="input100 bg-transparent" type="password" name="password" placeholder="Password"
-                        style="border: 2px solid black">
-                    <span class="focus-input100"></span>
-                    <span class="symbol-input100">
-                        <i class="fa fa-lock" aria-hidden="true"></i>
-                    </span>
-                </div>
-
-                <div class="container-login100-form-btn">
-                    <button class="login100-form-btn" type="submit" style="border-radius: 17px;">
-                        {{ __('Log in') }}
-                    </button>
-                </div>
-            </form>
-
+            </div>
         </div>
 
+        {{-- Form Login --}}
+        <div class="col-lg-6">
+            <div class="limiter">
+                <div class="container-login100 bg-white">
+                    <div class="container">
+
+                        <form class="validate-form" method="POST" action="{{ route('login') }}">
+                        @csrf
+                        <div class="login100-form-title">
+                            <h2 class="mb-5">Sign in</h2>
+                            <div class="wrap-input100 validate-input" data-validate="Username is Required">
+                                <input class="input100 bg-transparent" type="text" name="username" placeholder="Username"
+                                    style="box-shadow: 1px 1px  #2d98da" value="{{ old('username') }}">
+                                <span class="focus-input100"></span>
+                                <span class="symbol-input100">
+                                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="wrap-input100 validate-input" data-validate="Password is required">
+                            <input class="input100 bg-transparent" type="password" name="password" placeholder="Password"
+                            style="box-shadow: 1px 1px  #2d98da">
+                            <span class="focus-input100"></span>
+                            <span class="symbol-input100">
+                                <i class="fa fa-lock" aria-hidden="true"></i>
+                            </span>
+                        </div>
+        
+                        <div class="container-login100-form-btn">
+                            <button class="login100-form-btn text-white mt-5" type="submit" style="border-radius: 17px; width: 50%;">
+                                {{ __('Log in') }}
+                            </button>
+                        </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <div id="waveone">
-        <img src="{{ asset('Template-Login/images/Group 10.png') }}" alt="wave">
-    </div>
-
-    <div class="wavetwo">
-        <img src="{{ asset('Template-Login/images/group12.svg') }}" alt="wavetwo">
-    </div>
-
-
-
-
+    
 
     <!--===============================================================================================-->
     <script src="{{ asset('Template-Login/vendor/jquery/jquery-3.2.1.min.js') }}"></script>
@@ -128,7 +143,15 @@
     </script>
     <!--===============================================================================================-->
     <script src="{{ asset('Template-Login/js/main.js') }}"></script>
-
-</body>
-
+    
+  </body>
 </html>
+
+
+
+
+
+
+
+
+

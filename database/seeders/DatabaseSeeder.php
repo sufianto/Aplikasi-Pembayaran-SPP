@@ -49,6 +49,7 @@ class DatabaseSeeder extends Seeder
             'nis'  => '22373687',
             'nama' => 'siswa',
             'id_kelas' => 1,
+            'password' => Hash::make('siswa'),
             'nomor_telp' => '089689957106',
             'alamat' => 'Majalengka',
             'id_spp' => 1

@@ -13,11 +13,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/petugas', function () { 
+    return view('petugas.index'); 
+})->middleware('checkLevel:petugas');
+
+
 Route::get('/app', function () {
     return view('template.app');
 });
 Route::get('/admin', function () {
     return view('admin.dashboard');
+});
+
+Route::get('/login2', function () {
+    return view('auth.login2');
 });
 
 Route::get('/contoh', function () {

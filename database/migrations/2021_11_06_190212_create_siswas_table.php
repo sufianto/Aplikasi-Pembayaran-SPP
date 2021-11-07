@@ -19,6 +19,7 @@ class CreateSiswasTable extends Migration
             $table->char('nis', 8);
             $table->string('nama', 35);
             $table->bigInteger('id_kelas')->unsigned();
+            $table->string('password');
             $table->foreign('id_kelas')->references('id')->on('kelass');
             $table->text('alamat');
             $table->string('nomor_telp');

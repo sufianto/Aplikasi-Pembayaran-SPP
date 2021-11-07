@@ -6,7 +6,7 @@
 						<div class="col-md-12">
                             <h1><b>Riwayat</b></h1><br>
 							<div class="card">
-								<div class="card-header" style="background-color: #23AD9A; font-size: 30px;">
+								<div class="card-header" style="background-color: #45aaf2; font-size: 30px;">
 									<h4 class="card-title text-white fw-bold" style="font-family: 'Poppins', sans-serif; font-size: 20px;">Riwayat Pembayaran</h4>
 								</div>
 								<div class="card-body">
