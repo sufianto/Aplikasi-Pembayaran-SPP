@@ -14,18 +14,11 @@ class CheckLevel
      * @param  \Closure  $next
      * @return mixed
      */
-    public function handle($request, Closure $next)
+    public function handle(Request $request, Closure $next, ...$levels)
     {
-
-        $levels = array_slice(func_get_args(), 2);
-
-        foreach ($levels as $level) { 
-            $user = \Auth::user()->level;
-            if( $user == $level){
+        if (in_array($request->user()->level,$levels)) {
                 return $next($request);
-            }
-        }
-
-        return redirect('/');
+            };
+            return redirect()->back();
     }
 }
