@@ -45,17 +45,17 @@ Route::get('/siswa', function () {
 });
 
 
-Route::get('/kelas', function () {
+Route::get('/admin/kelas', function () {
     return view('admin.kelas.index');
 });
-Route::get('/tambahkelas', function () {
+Route::get('/admin/kelas/create', function () {
     return view('admin.kelas.create');
 });
-Route::get('/editkelas', function () {
+Route::get('/admin/kelas/edit', function () {
     return view('admin.kelas.edit');
 });
 
-route::resource('/admin/dataspp', 'SppController');
+route::resource('/admin/data-spp', 'SppController');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

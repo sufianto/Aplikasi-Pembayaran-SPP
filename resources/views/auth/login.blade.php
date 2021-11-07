@@ -71,12 +71,12 @@
                     <h2>SPP's</h2>
                 </span>
 
-                <div class="wrap-input100 validate-input" data-validate="Email is Required">
-                    <input class="input100 bg-transparent" type="text" name="email" placeholder="Email address"
+                <div class="wrap-input100 validate-input" data-validate="Username is Required">
+                    <input class="input100 bg-transparent" type="text" name="username" placeholder="Username"
                         style="border: 2px solid black" value="{{ old('email') }}">
                     <span class="focus-input100"></span>
                     <span class="symbol-input100">
-                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <i class="fa fa-user" aria-hidden="true"></i>
                     </span>
                 </div>
 

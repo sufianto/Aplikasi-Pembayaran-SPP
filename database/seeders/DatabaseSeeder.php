@@ -19,24 +19,20 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-         
+        
         User::create([
             'name' => 'admin',
             'email' => 'admin@spp.com',
             'password' => Hash::make('admin'),
             'level' => 'admin',
-            'created_at' => now(),
-            'updated_at' => now()
-         ]);
-         
-         User::create([
+        ]);
+        
+        User::create([
             'name' => 'petugas',
             'email' => 'petugas@spp.com',
             'password' => Hash::make('petugas'),
             'level' => 'petugas',
-            'created_at' => now(),
-            'updated_at' => now()
-         ]);
+        ]);
 
         Kelas::create([
             'nama_kelas' => 'XII RPL 2',
@@ -63,7 +59,6 @@ class DatabaseSeeder extends Seeder
             'id_siswa' => 1,
             'spp_bulan' => 'februari',
             'jumlah_bayar' => 150000
-
         ]);
     }
 }

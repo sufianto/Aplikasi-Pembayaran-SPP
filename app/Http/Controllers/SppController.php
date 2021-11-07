@@ -23,7 +23,7 @@ class SppController extends Controller
             'spp' => Spp::orderBy('id', 'DESC')->paginate(10),
         ];
       
-         return view('admin.spp.index', $data);
+        return view('admin.spp.index', $data);
     }
 
     /**

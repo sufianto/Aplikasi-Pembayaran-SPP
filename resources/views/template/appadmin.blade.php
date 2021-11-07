@@ -122,26 +122,26 @@
 						</div>
 					</div>
 					<ul class="nav nav-primary">
-						<li class="nav-item {{ (request()->is('siswa')) ? 'active' : '' }}">
-							<a href="siswa">
+						<li class="nav-item {{ (request()->is('admin/siswa')) ? 'active' : '' }}">
+							<a href="/admin/siswa">
 								<i class="fas fa-user"></i>
 								<p>Data Siswa</p>
 							</a>
 						</li>
-						<li class="nav-item {{ (request()->is('petugas')) ? 'active' : '' }}">
-							<a href="petugas">
+						<li class="nav-item {{ (request()->is('admin/petugas')) ? 'active' : '' }}">
+							<a href="/admin/petugas">
 								<i class="fas fa-user-cog"></i>
 								<p>Data Petugas</p>
 							</a>
 						</li>
-						<li class="nav-item {{ (request()->is('kelas')) ? 'active' : '' }}">
-							<a href="kelas">
+						<li class="nav-item {{ (request()->is('admin/kelas')) ? 'active' : '' }}">
+							<a href="/admin/kelas">
 								<i class="fas fa-users"></i>
 								<p>Data Kelas</p>
 							</a>
 						</li>
-						<li class="nav-item {{ (request()->is('admin/dataspp')) ? 'active' : '' }}">
-							<a href="/admin/dataspp">
+						<li class="nav-item {{ (request()->is('admin/data-spp')) ? 'active' : '' }}">
+							<a href="{{ route('data-spp.index') }}">
 								<i class="fas fa-money-bill-wave-alt"></i>
 								<p>Data SPP</p>
 							</a>
