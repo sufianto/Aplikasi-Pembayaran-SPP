@@ -51,10 +51,6 @@ return [
             'provider' => 'siswas',
         ],
 
-        'petugas' => [
-            'driver' => 'session',
-            'provider' => 'petugas',
-        ],
     ],
 
     /*
@@ -83,11 +79,6 @@ return [
         'siswas' => [
             'driver' => 'eloquent',
             'model' => App\Models\Siswa::class,
-        ],
-
-        'petugas' => [
-            'driver' => 'eloquent',
-            'model' => App\Models\Petugas::class,
         ],
 
         // 'users' => [

@@ -13,6 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('petugas', function () { return view('petugas.index'); })->middleware('checkLevel:petugas');
+
+
 Route::get('/app', function () {
     return view('template.app');
 });
