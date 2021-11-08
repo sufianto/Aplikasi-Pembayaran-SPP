@@ -9,18 +9,18 @@
             </div>
             <div class="card-body">
                 <div class="table-responsive " style="overflow-x: hidden">
-                    <form>
-
+                    <form action="{{ route('kelas.store') }}" method="POST">
+                      @csrf
                         <div class="row mb-3">
                             <label for="namakelas" class="col-sm-2 col-form-label"> <b><h2>Nama Kelas</h2></b> </label>
                             <div class="col-sm-10">
-                              <input type="text" class="form-control" id="namakelas">
+                              <input type="text" class="form-control" id="namakelas" name="nama_kelas" required>
                             </div>
                           </div>
                           <div class="row mb-3">
-                            <label for="walikelas" class="col-sm-2 col-form-label"> <b><h2>Wali Kelas</h2></b></label>
+                            <label for="Kompetensi keahlian" class="col-sm-2 col-form-label"> <b><h2>Kompetensi keahlian</h2></b></label>
                             <div class="col-sm-10">
-                              <input type="text" class="form-control" id="walikelas">
+                              <input type="text" class="form-control" id="Kompetensi keahlian" name="kompetensi_keahlian" required>
                             </div>
                           </div>
                         

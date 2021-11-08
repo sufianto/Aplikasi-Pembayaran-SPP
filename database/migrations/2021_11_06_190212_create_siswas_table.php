@@ -20,7 +20,7 @@ class CreateSiswasTable extends Migration
             $table->string('nama', 35);
             $table->bigInteger('id_kelas')->unsigned();
             $table->string('password');
-            $table->foreign('id_kelas')->references('id')->on('kelass');
+            $table->foreign('id_kelas')->references('id')->on('kelass')->onDelete('cascade')->onUpdate('cascade');
             $table->text('alamat');
             $table->string('nomor_telp');
             $table->bigInteger('id_spp')->unsigned();

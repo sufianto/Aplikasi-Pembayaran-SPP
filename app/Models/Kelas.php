@@ -11,4 +11,10 @@ class Kelas extends Model
     protected $fillable = [
           'nama_kelas', 'kompetensi_keahlian'
     ];
+
+    protected $appends = ['total_siswa'];
+    public function getTotalSiswaAttribute()
+    {
+        return Siswa::where('id_kelas',$this->id)->count();
+    }
 }
