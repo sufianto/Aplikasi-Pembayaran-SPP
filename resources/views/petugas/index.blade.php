@@ -1,7 +1,11 @@
 @extends('template.app')
 @section('main')
 
-@if(Auth::user(['level' => 'petugas']))
+@if(Auth::check()
+@if(Auth::user()->level == 'petugas')
+
+
+
     <style>
         .ani {
             transition: 500ms;
@@ -175,5 +179,7 @@
     <br>
     <br>
     <br>
-    @endif
+
+@endif
+@endif
 @endsection

@@ -3,7 +3,7 @@
 <div class="card">
     <div class="card-header bg-primary">
         <h4 class="card-title text-white float-left">Data SPP</h4>
-        <a href="dataspp/create" class="btn btn-sm btn-circle btn-success float-right"><i class="fas fa-plus"></i></a>
+        <a href="{{ route('data-spp.create') }}" class="btn btn-sm btn-circle btn-success float-right"><i class="fas fa-plus"></i></a>
     </div>
     <div class="card-body">
         <div class="table-responsive">
@@ -28,8 +28,8 @@
                             <td>{{$p->bulan}}</td>
                             <td>{{$p->nominal}}</td>
                             <td>
-                                <a href="{{ url('admin/dataspp/'. $p->id .'/edit') }}" class="btn btn-sm btn-circle btn-primary float-left mr-2"><i class="fas fa-edit"></i></a>
-                                <form method="post" action="{{ url('admin/dataspp', $p->id) }}" id="delete{{ $p->id }}">
+                                <a href="{{ route('data-spp.edit' , $p->id) }}" class="btn btn-sm btn-circle btn-primary float-left mr-2"><i class="fas fa-edit"></i></a>
+                                <form method="post" action="{{ route('data-spp.destroy' , $p->id)  }}" id="delete{{ $p->id }}">
                                     
                                     @csrf
                                     @method('delete')

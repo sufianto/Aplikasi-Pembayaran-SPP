@@ -68,11 +68,8 @@
             }
         }
     </style>
-
-    <title> SPP's Login </title>
   </head>
-  <body>
-      
+  <body>      
     <div class="row">
 
         {{-- Selamat Datang --}}
