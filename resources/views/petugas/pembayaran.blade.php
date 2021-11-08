@@ -10,23 +10,42 @@
             </div>
             <div class="card-body">
                 <div class="table-responsive " style="overflow-x: hidden">
-                    <form>
+                    <form action="" method="POST">
+                      @csrf
                         <div class="row mb-3">
-                            <label for="inputNIPD" class="col-sm-2 col-form-label"><h3 class="fw-bold">NIPD</h3></label>
+                            <label for="inputNIPD" class="col-sm-2 col-form-label"><h3 class="fw-bold">NISN Siswa</h3></label>
                             <div class="col-sm-10">
-                              <input type="text" class="form-control shadow-sm" style="border: 1px solid #4b6584" id="inputNIPD">
+                              <select name="inputNIPD" id="inputNIPD" class="form-control shadow-sm" style="border: 1px solid #4b6584">
+                                @foreach ($siswa as $p)
+                                  <option value="{{$p->nisn}}">{{$p->nisn}}</option>
+                                @endforeach
+                              </select>
                             </div>
                           </div>
                           <div class="row mb-3">
-                            <label for="inputtanggal" class="col-sm-2 col-form-label"><h3 class="fw-bold">Tanggal Bayar</h3></label>
+                            <label for="inputtanggal" class="col-sm-2 col-form-label"><h3 class="fw-bold">SPP Bulan</h3></label>
                             <div class="col-sm-10">
-                              <input type="text" class="form-control shadow-sm" style="border: 1px solid #4b6584" id="inputtanggal">
+                              <select name="inputbulan" id="inputbulan" class="form-control shadow-sm" style="border: 1px solid #4b6584">
+                                <option value="">Pilih Bulan</option>
+                                <option value="Januari">Januari</option>
+                                <option value="Februari">Februari</option>
+                                <option value="Maret">Maret</option>
+                                <option value="April">April</option>
+                                <option value="Mei">Mei</option>
+                                <option value="Juni">Juni</option>
+                                <option value="Juli">Juli</option>
+                                <option value="Agustus">Agustus</option>
+                                <option value="September">September</option>
+                                <option value="Oktober">Oktober</option>
+                                <option value="November">November</option>
+                                <option value="Desember">Desember</option>
+                              </select>
                             </div>
                           </div>
                           <div class="row mb-3">
                             <label for="inputjumlah" class="col-sm-2 col-form-label"><h3 class="fw-bold">Jumlah Bayar</h3></label>
                             <div class="col-sm-10">
-                              <input type="text" class="form-control shadow-sm" style="border: 1px solid #4b6584" id="inputjumlah">
+                              <input type="number" class="form-control shadow-sm" style="border: 1px solid #4b6584" id="inputjumlah">
                             </div>
                           </div>
                         

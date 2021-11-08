@@ -1,8 +1,7 @@
 @extends('template.app')
 @section('main')
 
-@if(Auth::check()
-@if(Auth::user()->level == 'petugas')
+@if(Auth::check() && Auth::user()->level == 'petugas')
 
 
 
@@ -86,12 +85,12 @@
 
     <section class="mt-5 mb-5">
         <div class="container mb-4 text-center">
-            <span class="mb-4 fw-bold px-5 py-2 text-white" style="background: #45aaf2; border-radius: 50px;">(Nama Petugas)</span>
+            <span class="mb-4 fw-bold px-5 py-2 text-white" style="background: #45aaf2; border-radius: 50px;">{{Auth::user()->name}}</span>
         </div>
         <div class="row d-flex justify-content-center  flex-wrap" data-aos="zoom-in" data-aos-delay="100">
             
             <div class="ani bg-light col-md-4 col-lg-4 col-10 mb-4 shadow m-4 satu" style="width: 35%; border-radius:10px;">
-                <a class="card-petugas" href="/pembayaran">
+                <a class="card-petugas" href="/petugas/pembayaran">
                     <div class="row">
                         <div class="col-6">
                             <div class="card-body" style="width: 100%">
@@ -112,7 +111,7 @@
             
             {{-- max-width 550px --}}
             <div class="ani bg-light col-md-4 col-lg-4 col-10 mb-4 shadow m-4 dua" style="width: 35%; border-radius:10px;">
-                <a class="card-petugas" href="/pembayaran">
+                <a class="card-petugas" href="/petugas/pembayaran">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="card-body" style="width: 100%">
@@ -132,7 +131,7 @@
             </div>
 
             <div class="ani bg-light col-md-4 col-lg-4 col-10 mb-4 shadow m-4 satu" style="width: 35%; border-radius:10px;">
-                <a class="card-petugas" href="/historypetugas">
+                <a class="card-petugas" href="/petugas/historypembayaran">
                     <div class="row">
                         <div class="col-6">
                             <div class="card-body" style="width: 100%">
@@ -152,7 +151,7 @@
 
             {{-- max-width 550px --}}
             <div class="ani bg-light col-md-4 col-lg-4 col-10 mb-4 shadow m-4 dua" style="width: 35%; border-radius:10px;">
-                <a class="card-petugas" href="/historypetugas">
+                <a class="card-petugas" href="/petugas/historypembayaran">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="card-body" style="width: 100%">
@@ -180,6 +179,5 @@
     <br>
     <br>
 
-@endif
 @endif
 @endsection

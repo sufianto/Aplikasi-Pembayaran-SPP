@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PetugasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,18 +35,16 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
-Route::get('/historypetugas', function () {
-    return view('petugas.history');
-});
-
-Route::get('/pembayaran', function () {
-    return view('petugas.pembayaran');
-});
-
 Route::middleware(['auth:siswa'])->group(function () {
     Route::get('/siswa', function () {
         return view('siswas.index');
     });
+});
+
+Route::middleware(['auth:user', 'checkLevel:petugas'])->group(function () {
+    Route::get('petugas', [PetugasController::class, 'index']);
+    Route::get('petugas/pembayaran', [PetugasController::class, 'pembayaran']);
+    route::get('petugas/historypembayaran', [PetugasController::class, 'history']);
 });
 
 Route::middleware(['auth:user', 'checkLevel:admin'])->group(function () {
