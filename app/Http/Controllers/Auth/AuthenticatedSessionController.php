@@ -31,13 +31,13 @@ class AuthenticatedSessionController extends Controller
     {
         if (Auth::guard('siswa')->attempt(['nisn' => $request->username, 'password' => $request->password])) {
             return redirect('/siswa');
-        } elseif (Auth::guard('user')->attempt(['email' => $request->username, 'password' => $request->password, 'level' => 'petugas'])) {
+        } elseif (Auth::guard('web')->attempt(['email' => $request->username, 'password' => $request->password, 'level' => 'petugas'])) {
             return redirect('/petugas');
-        } elseif (Auth::guard('user')->attempt(['email' => $request->username, 'password' => $request->password, 'level' => 'admin'])) {
+        } elseif (Auth::guard('web')->attempt(['email' => $request->username, 'password' => $request->password, 'level' => 'admin'])) {
             return redirect('/admin');
         }
 
-        return redirect('/login');
+        return redirect('/');
         
     }
 
