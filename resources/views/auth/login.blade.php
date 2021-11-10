@@ -143,6 +143,7 @@
     </script>
     <!--===============================================================================================-->
     <script src="{{ asset('Template-Login/js/main.js') }}"></script>
+    @include('sweetalert::alert')
     
   </body>
 </html>

@@ -21,14 +21,14 @@ class DatabaseSeeder extends Seeder
     {
         
         User::create([
-            'name' => 'admin',
+            'name' => 'Admin',
             'email' => 'admin@spp.com',
             'password' => Hash::make('admin'),
             'level' => 'admin',
         ]);
         
         User::create([
-            'name' => 'petugas',
+            'name' => 'Petugas',
             'email' => 'petugas@spp.com',
             'password' => Hash::make('petugas'),
             'level' => 'petugas',
@@ -47,7 +47,7 @@ class DatabaseSeeder extends Seeder
         Siswa::create([
             'nisn' => '123456789876',
             'nis'  => '22373687',
-            'nama' => 'siswa',
+            'nama' => 'Siswa',
             'id_kelas' => 1,
             'password' => Hash::make('siswa'),
             'nomor_telp' => '089689957106',

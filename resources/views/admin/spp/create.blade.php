@@ -9,13 +9,14 @@
             </div>
             <div class="card-body">
                 <div class="table-responsive " style="overflow-x: hidden">
-                    <form method="post" action="{{url('admin/dataspp')}}">
+                    <form method="post" action="{{url('admin/data-spp/')}}">
                       @csrf
                       <div class="container">
                         <div class="row">
                           <label for="bulan" class="col-sm-2 col-form-label"> <b><h2>Bulan</h2></b></label>
                           <div class="form-group col-sm-10">
                             <select class="form-control" id="bulan" name="bulan">
+                              <option value="" disabled selected>Pilih Bulan</option>
                               <option value="Januari">Januari</option>
                               <option value="Februari">Februari</option>
                               <option value="Maret">Maret</option>

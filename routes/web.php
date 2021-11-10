@@ -52,15 +52,6 @@ Route::middleware(['auth:user', 'checkLevel:admin'])->group(function () {
         return view('admin.dashboard');
     });
     Route::resource('/admin/data-spp', 'SppController');
-    // Route::get('/admin/kelas', function () {
-    //     return view('admin.kelas.index');
-    // });
-    // Route::get('/admin/kelas/create', function () {
-    //     return view('admin.kelas.create');
-    // });
-    // Route::get('/admin/kelas/edit', function () {
-    //     return view('admin.kelas.edit');
-    // });
     Route::resource('/admin/kelas','KelasController');
 });
 

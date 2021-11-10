@@ -70,7 +70,7 @@ class SppController extends Controller
             endif;
          endif;
       
-        return redirect('/admin/dataspp');
+        return redirect('admin/data-spp');
     }
 
     /**
@@ -121,7 +121,7 @@ class SppController extends Controller
                   endif;
             endif;
             
-            return redirect('admin/dataspp/');
+            return redirect('admin/data-spp/');
     }
 
     /**

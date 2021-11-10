@@ -14,29 +14,32 @@
 										<table id="basic-datatables" class="display table table-hover" >
 											<thead>
 												<tr>
-													<th>NIPD</th>
+													<th>NISN</th>
 													<th>Tanggal Bayar</th>
 													<th>Jumlah Bayar</th>
 												</tr>
 											</thead>
 											<tfoot>
 												<tr>
-													<th>NIPD</th>
+													<th>NISN</th>
 													<th>Tanggal Bayar</th>
 													<th>Jumlah Bayar</th>
 												</tr>
 											</tfoot>
 											<tbody>
-												<tr>
-													<td>451324</td>
-													<td>4/11/2021</td>
-													<td>500000</td>
-												</tr>
-												<tr>
-													<td>481544</td>
-													<td>5/11/2021</td>
-													<td>500000</td>
-												</tr>
+
+												@foreach ($pembayaran as $p)
+													<tr>
+														
+														{{-- ini belom bisa dinamisin NISN nya, aku ndak tau caranya --}}
+														<td>{{$p->id_siswa}}</td>
+														{{-- ini belom bisa dinamisin NISN nya, aku ndak tau caranya --}}
+
+														<td>{{$p->created_at}}</td>
+														<td>{{$p->jumlah_bayar}}</td>
+													</tr>	
+												@endforeach
+												
 											</tbody>
 										</table>
 									</div>

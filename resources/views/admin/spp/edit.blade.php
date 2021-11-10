@@ -9,7 +9,7 @@
               </div>
               <div class="card-body">
                   <div class="table-responsive " style="overflow-x: hidden">
-                      <form method="post" action="{{ url('/admin/dataspp', $edit->id) }}">
+                      <form method="post" action="{{ url('/admin/data-spp', $edit->id) }}">
                         @csrf
                         @method('put')
                         <div class="container">
