@@ -128,8 +128,8 @@
 								<p>Data Siswa</p>
 							</a>
 						</li>
-						<li class="nav-item {{ (request()->is('admin/petugas')) ? 'active' : '' }}">
-							<a href="/admin/petugas">
+						<li class="nav-item {{ (request()->is('admin/data-petugas')) ? 'active' : '' }}">
+							<a href="/admin/data-petugas">
 								<i class="fas fa-user-cog"></i>
 								<p>Data Petugas</p>
 							</a>

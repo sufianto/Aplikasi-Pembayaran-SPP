@@ -53,6 +53,7 @@ Route::middleware(['auth:user', 'checkLevel:admin'])->group(function () {
     });
     Route::resource('/admin/data-spp', 'SppController');
     Route::resource('/admin/kelas','KelasController');
+    route::resource('/admin/data-petugas', 'AdminPetugasController');
 });
 
 Route::get('/dashboard', function () {
